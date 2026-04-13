@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proactive Agent & Multi-Agent Collaboration 论文推荐</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f5f5f7;
+            color: #1d1d1f;
+            line-height: 1.6;
+            padding: 40px 20px;
+        }
+        .container { max-width: 960px; margin: 0 auto; }
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        .subtitle {
+            text-align: center;
+            color: #6e6e73;
+            font-size: 0.95rem;
+            margin-bottom: 48px;
+        }
+        .section {
+            margin-bottom: 48px;
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            padding-bottom: 12px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #0071e3;
+            color: #0071e3;
+        }
+        .subsection-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin: 24px 0 12px 0;
+        }
+        .paper {
+            background: #fff;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+            transition: box-shadow 0.2s;
+        }
+        .paper:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .paper-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        .paper-title a {
+            color: #0071e3;
+            text-decoration: none;
+        }
+        .paper-title a:hover { text-decoration: underline; }
+        .paper-id {
+            font-size: 0.8rem;
+            color: #86868b;
+            margin-bottom: 8px;
+            font-family: "SF Mono", Menlo, monospace;
+        }
+        .paper-desc {
+            font-size: 0.9rem;
+            color: #424245;
+        }
+        .tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+        .tag-core { background: #e8f5e9; color: #2e7d32; }
+        .tag-proactive { background: #fff3e0; color: #e65100; }
+        .tag-collab { background: #e3f2fd; color: #1565c0; }
+        .tag-safety { background: #fce4ec; color: #c62828; }
+        .tag-framework { background: #f3e5f5; color: #6a1b9a; }
+        .star { color: #ff9500; margin-right: 4px; }
+        .date {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 2px;
+            vertical-align: middle;
+            background: #f0f0f0;
+            color: #555;
+            font-family: "SF Mono", Menlo, monospace;
+        }
+        .legend {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 36px;
+            font-size: 0.85rem;
+        }
+        .legend-item { display: flex; align-items: center; gap: 4px; }
+        footer {
+            text-align: center;
+            color: #86868b;
+            font-size: 0.8rem;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid #d2d2d7;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Proactive Agent & Multi-Agent Collaboration</h1>
+    <p class="subtitle">评估 Agent 主动行动能力与多 Agent / 多人类协同的论文推荐</p>
+
+    <div class="legend">
+        <div class="legend-item"><span class="tag tag-core">Core Benchmark</span> 核心 Benchmark</div>
+        <div class="legend-item"><span class="tag tag-proactive">Proactive</span> 主动行动</div>
+        <div class="legend-item"><span class="tag tag-collab">Collaboration</span> 多方协同</div>
+        <div class="legend-item"><span class="tag tag-safety">Safety</span> 安全对齐</div>
+        <div class="legend-item"><span class="tag tag-framework">Framework</span> 框架/平台</div>
+        <div class="legend-item"><span class="star">★</span> 优先推荐</div>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section">
+        <div class="section-title">一、Proactive Agent 核心 Benchmark</div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="star">★</span>
+                <span class="tag tag-core">Core Benchmark</span> <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2602.04482" target="_blank">ProAgentBench: Evaluating LLM Agents for Proactive Assistance with Real-World Data</a>
+                <span class="date">Feb 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2602.04482</div>
+            <div class="paper-desc">基于真实用户 session 数据（28,000+ 事件），将 proactive assistance 分解为 <strong>timing prediction</strong>（何时主动介入）和 <strong>content generation</strong>（提供什么帮助）。目前最直接、最系统的 proactive agent benchmark。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="star">★</span>
+                <span class="tag tag-core">Core Benchmark</span> <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2510.19771" target="_blank">PROBE: Beyond Reactivity — Measuring Proactive Problem Solving in LLM Agents</a>
+                <span class="date">Oct 2025</span>
+            </div>
+            <div class="paper-id">arXiv: 2510.19771</div>
+            <div class="paper-desc">将 proactivity 清晰分解为三个能力维度：① 搜索未指明的问题 ② 识别具体瓶颈 ③ 执行适当修复。最好的模型端到端仅达 40%，揭示了当前 LLM 在主动性上的巨大差距。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-core">Core Benchmark</span> <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2604.08455" target="_blank">KnowU-Bench: Interactive, Proactive, and Personalized Mobile Agent Evaluation</a>
+                <span class="date">Apr 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2604.08455</div>
+            <div class="paper-desc">安卓移动端 proactive agent benchmark，包含 64 个 proactive 任务，评估 agent 主动推断用户偏好和征求同意（而非简单上下文查找）的能力。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-core">Core Benchmark</span> <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2601.11854" target="_blank">ATOD: Evaluation Framework and Benchmark for Agentic Task-Oriented Dialogue Systems</a>
+                <span class="date">Jan 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2601.11854</div>
+            <div class="paper-desc">任务导向对话系统中的 agentic 能力评估，显式评估 <strong>proactivity</strong> 和多目标协调维度，提供 ATOD-Eval 整体评价框架。</div>
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section">
+        <div class="section-title">二、Proactive 子维度：主动澄清、主动信息获取、主动记忆利用</div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2507.22034" target="_blank">UserBench: An Interactive Gym Environment for User-Centric Agents</a>
+                <span class="date">Jul 2025</span>
+            </div>
+            <div class="paper-id">arXiv: 2507.22034</div>
+            <div class="paper-desc">用户逐步透露偏好，agent 需主动澄清意图。即使最好的模型也仅发现不到 30% 的用户偏好，揭示了 agent 主动提问能力的不足。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2509.26490" target="_blank">VitaBench: Versatile Interactive Tasks in Real-world Applications</a>
+                <span class="date">Sep 2025</span>
+            </div>
+            <div class="paper-id">arXiv: 2509.26490</div>
+            <div class="paper-desc">要求 agent 主动澄清模糊指令并追踪变化的用户意图，100 个跨场景任务，先进模型仅 30% 成功率。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2601.19935" target="_blank">Mem2ActBench: Evaluating Long-Term Memory Utilization in Task-Oriented Autonomous Agents</a>
+                <span class="date">Jan 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2601.19935</div>
+            <div class="paper-desc">评估 agent 能否主动利用长期记忆来执行工具操作（而非被动检索事实），400 个记忆依赖的 tool-use 任务。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2601.18137" target="_blank">DeepPlanning: Long-Horizon Agentic Planning with Verifiable Constraints</a>
+                <span class="date">Jan 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2601.18137</div>
+            <div class="paper-desc">长期规划 benchmark，要求 agent 在旅行规划和购物任务中进行主动信息获取，前沿模型仍然表现较差。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2602.10471" target="_blank">TestExplora: Proactive Bug Discovery via Repository-Level Test Generation</a>
+                <span class="date">Feb 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2602.10471</div>
+            <div class="paper-desc">评估 LLM 作为主动测试者，通过对比实现与文档意图来发现 bug（无需 post-failure 信息），最好模型仅 16% F2P rate。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2410.09580" target="_blank">SAPIENT: Multi-turn Conversational Recommendation with Strategic Planning and MCTS</a>
+                <span class="date">Oct 2024</span>
+            </div>
+            <div class="paper-id">arXiv: 2410.09580</div>
+            <div class="paper-desc">Agent 通过多轮对话主动引导用户表达偏好，使用 MCTS 规划对话策略，在 4 个推荐 benchmark 上评估。</div>
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section">
+        <div class="section-title">三、Proactive 的训练与安全对齐</div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="star">★</span>
+                <span class="tag tag-safety">Safety</span> <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2602.04197" target="_blank">From Helpfulness to Toxic Proactivity: Diagnosing Behavioral Misalignment in LLM Agents</a>
+                <span class="date">Feb 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2602.04197</div>
+            <div class="paper-desc">提出 <strong>Toxic Proactivity</strong> 概念——agent 为了最大化帮助而突破伦理约束的行为。提供系统化的 benchmark 用于诊断这种行为失调。对 proactive agent 安全部署至关重要。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2602.11351" target="_blank">BAO: Pushing Forward Pareto Frontiers of Proactive Agents with Behavioral Agentic Optimization</a>
+                <span class="date">Feb 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2602.11351</div>
+            <div class="paper-desc">用 Agentic RL 训练 proactive agent，在任务完成度和用户参与度之间寻找 Pareto 最优。提出 UserRL benchmark。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2602.00575" target="_blank">VAGEN: Agentic Reward Modeling — Verifying GUI Agent via Online Proactive Interaction</a>
+                <span class="date">Jan 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2602.00575</div>
+            <div class="paper-desc">将评估范式从被动判断转为主动交互验证——verifier agent 主动探测环境以确认任务是否完成，在 OSWorld 和 AndroidWorld 上评估。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2602.07796" target="_blank">Thinking Makes LLM Agents Introverted</a>
+                <span class="date">Feb 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2602.07796</div>
+            <div class="paper-desc">发现强制 CoT thinking 会让 agent "变内向"（减少与用户交互）。研究表明 <strong>proactive transparency</strong> 是优化 agent 的关键杠杆。7 个模型，3 个 benchmark。</div>
+        </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section">
+        <div class="section-title">四、多 Agent 协作 Benchmark</div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="star">★</span>
+                <span class="tag tag-core">Core Benchmark</span> <span class="tag tag-collab">Collaboration</span>
+                <a href="https://arxiv.org/abs/2402.16499" target="_blank">LLMArena: Assessing Capabilities of LLMs in Dynamic Multi-Agent Environments</a>
+                <span class="date">Feb 2024</span>
+            </div>
+            <div class="paper-id">arXiv: 2402.16499</div>
+            <div class="paper-desc">7 个游戏环境中评估 LLM agent 的沟通、对手建模和团队协作能力，使用 TrueSkill 评分系统。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-collab">Collaboration</span>
+                <a href="https://arxiv.org/abs/2509.21981" target="_blank">CoBel-World: Collaborative Belief Reasoning with LLMs for Efficient Multi-Agent Collaboration</a>
+                <span class="date">Sep 2025</span>
+            </div>
+            <div class="paper-id">arXiv: 2509.21981</div>
+            <div class="paper-desc">意图感知的信念建模（Theory of Mind），在 TDW-MAT 和 C-WAH 上评估，通过主动信念推理减少 64–79% 通信开销。兼具 proactive + collaborative 维度。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-collab">Collaboration</span>
+                <a href="https://arxiv.org/abs/2602.06967" target="_blank">CLiMBench: Adaptive Group Negotiation for Heterogeneous Multi-Robot Collaboration with LLMs</a>
+                <span class="date">Dec 2025</span>
+            </div>
+            <div class="paper-id">arXiv: 2602.06967</div>
+            <div class="paper-desc">异构多机器人协作 benchmark，LLM 驱动的组协商框架，评估装配任务中的 agent 间谈判与任务分配。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-collab">Collaboration</span> <span class="tag tag-framework">Framework</span>
+                <a href="https://arxiv.org/abs/2510.04851" target="_blank">LEGOMem: Modular Procedural Memory for Multi-Agent LLM Systems for Workflow Automation</a>
+                <span class="date">Oct 2025</span>
+            </div>
+            <div class="paper-id">arXiv: 2510.04851</div>
+            <div class="paper-desc">研究 orchestrator 与 task agent 之间的记忆分配和任务委托机制。发现 orchestrator 级记忆助力任务分解/委托，agent 级记忆提升执行精度。OfficeBench 评估。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-collab">Collaboration</span>
+                <a href="https://arxiv.org/abs/2604.01487" target="_blank">AgentSocialBench: Evaluating Privacy Risks in Human-Centered Agentic Social Networks</a>
+                <span class="date">Apr 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2604.01487</div>
+            <div class="paper-desc">多 agent 为多用户服务的社交网络场景，评估 dyadic 和 multi-party 交互中的隐私风险。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-collab">Collaboration</span>
+                <a href="https://arxiv.org/abs/2603.29846" target="_blank">SNEAK: Evaluating Strategic Communication and Information Leakage in LLMs</a>
+                <span class="date">Mar 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2603.29846</div>
+            <div class="paper-desc">多 agent 场景中评估在协作信号质量和对手信息泄露之间的平衡。人类大幅超过 LLM。</div>
+        </div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section">
+        <div class="section-title">五、多人类 + 多 Agent 混合协同</div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="star">★</span>
+                <span class="tag tag-collab">Collaboration</span> <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2508.13721" target="_blank">CausalPlan: Causality-Driven Planning for LLM Multi-Agent Collaboration</a>
+                <span class="date">Aug 2025</span>
+            </div>
+            <div class="paper-id">arXiv: 2508.13721</div>
+            <div class="paper-desc">在 Overcooked-AI 上评估 4 个 LLM 在 5 个协调任务中的 AI-AI 和 <strong>human-AI</strong> 协作表现。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="star">★</span>
+                <span class="tag tag-collab">Collaboration</span>
+                <a href="https://arxiv.org/abs/2404.15155" target="_blank">MDAgents: An Adaptive Collaboration of LLMs for Medical Decision-Making</a>
+                <span class="date">Apr 2024</span>
+            </div>
+            <div class="paper-id">arXiv: 2404.15155</div>
+            <div class="paper-desc">自动为 LLM 团队分配协作结构（solo → 小组讨论 → 多团队会诊），与人类医生对比，10 个医学 benchmark。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-collab">Collaboration</span> <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2602.04326" target="_blank">PCE: Uncertainty-Aware Planning for Embodied Agents</a>
+                <span class="date">Feb 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2602.04326</div>
+            <div class="paper-desc">在 C-WAH 和 TDW-MAT 上评估不确定性下的主动规划，包含 <strong>human-agent 信任和沟通</strong>的用户研究。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-collab">Collaboration</span> <span class="tag tag-proactive">Proactive</span>
+                <a href="https://arxiv.org/abs/2305.11271" target="_blank">Towards Collaborative Plan Acquisition through Theory of Mind in Situated Dialogue</a>
+                <span class="date">May 2023</span>
+            </div>
+            <div class="paper-id">arXiv: 2305.11271 · IJCAI 2023</div>
+            <div class="paper-desc">Agent 建模伙伴的心智状态，识别对方缺失的知识并主动沟通，在 3D blocks world 协作任务中评估。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-collab">Collaboration</span>
+                <a href="https://arxiv.org/abs/2502.16863" target="_blank">Leveraging LLMs for Effective and Explainable Multi-Agent Credit Assignment</a>
+                <span class="date">Feb 2025</span>
+            </div>
+            <div class="paper-id">arXiv: 2502.16863</div>
+            <div class="paper-desc">多 agent 协作中的贡献归因问题。发现人类观察 agent 行为时能给出更好的功劳评估。在 Level-Based Foraging、Robotic Warehouse 等上评估。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-collab">Collaboration</span> <span class="tag tag-framework">Framework</span>
+                <a href="https://arxiv.org/abs/2602.18916" target="_blank">ACAL: Adaptive Collaboration of Arena-Based Argumentative LLMs for Explainable Legal Reasoning</a>
+                <span class="date">Feb 2026</span>
+            </div>
+            <div class="paper-id">arXiv: 2602.18916</div>
+            <div class="paper-desc">多 agent 法律推理中的 adaptive collaboration + Human-in-the-Loop 可争议性工作流。LegalBench 评估。</div>
+        </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section">
+        <div class="section-title">六、综合 Agent Benchmark（供对比参考）</div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-core">Core Benchmark</span>
+                <a href="https://arxiv.org/abs/2308.03688" target="_blank">AgentBench: Evaluating LLMs as Agents</a>
+                <span class="date">Aug 2023</span>
+            </div>
+            <div class="paper-id">arXiv: 2308.03688 · 清华大学</div>
+            <div class="paper-desc">8 个环境（OS、DB、Web、游戏等）下评估 LLM 的自主行动能力，综合性最强的 agent benchmark 之一。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-core">Core Benchmark</span>
+                <a href="https://arxiv.org/abs/2311.12983" target="_blank">GAIA: A Benchmark for General AI Assistants</a>
+                <span class="date">Nov 2023</span>
+            </div>
+            <div class="paper-id">arXiv: 2311.12983 · Meta FAIR</div>
+            <div class="paper-desc">评估通用 AI 助手自主完成真实世界任务，需要多步推理、工具使用、web 浏览。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-core">Core Benchmark</span>
+                <a href="https://arxiv.org/abs/2310.06770" target="_blank">SWE-bench: Can Language Models Resolve Real-World GitHub Issues?</a>
+                <span class="date">Oct 2023</span>
+            </div>
+            <div class="paper-id">arXiv: 2310.06770 · Princeton</div>
+            <div class="paper-desc">评估 agent 自主修复真实 GitHub issue 的能力，端到端代码修改。Coding agent 的标杆 benchmark。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-core">Core Benchmark</span>
+                <a href="https://arxiv.org/abs/2307.13854" target="_blank">WebArena: A Realistic Web Environment for Building Autonomous Agents</a>
+                <span class="date">Jul 2023</span>
+            </div>
+            <div class="paper-id">arXiv: 2307.13854 · CMU</div>
+            <div class="paper-desc">在真实网站（电商、论坛、GitLab 等）中评估 agent 自主完成 web 任务。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-core">Core Benchmark</span>
+                <a href="https://arxiv.org/abs/2404.07972" target="_blank">OSWorld: Benchmarking Multimodal Agents for Open-Ended Tasks in Real Computer Environments</a>
+                <span class="date">Apr 2024</span>
+            </div>
+            <div class="paper-id">arXiv: 2404.07972</div>
+            <div class="paper-desc">在真实操作系统中评估 agent 自主完成计算机任务，包括跨应用操作。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <span class="tag tag-core">Core Benchmark</span>
+                <a href="https://arxiv.org/abs/2406.12045" target="_blank">τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains</a>
+                <span class="date">Jun 2024</span>
+            </div>
+            <div class="paper-id">arXiv: 2406.12045 · Sierra</div>
+            <div class="paper-desc">评估 agent 作为客服在多轮对话中自主处理用户请求，需要使用工具完成实际操作。</div>
+        </div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section">
+        <div class="section-title">七、Survey 综述论文</div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <a href="https://arxiv.org/abs/2308.11432" target="_blank">A Survey on Large Language Model based Autonomous Agents</a>
+                <span class="date">Aug 2023</span>
+            </div>
+            <div class="paper-id">arXiv: 2308.11432</div>
+            <div class="paper-desc">全面综述 LLM agent 的规划、行动、记忆等能力，覆盖最广。</div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                <a href="https://arxiv.org/abs/2309.07864" target="_blank">The Rise and Potential of Large Language Model Based Agents: A Survey</a>
+                <span class="date">Sep 2023</span>
+            </div>
+            <div class="paper-id">arXiv: 2309.07864 · 复旦大学</div>
+            <div class="paper-desc">从认知科学视角审视 LLM agent，包含多 agent 协作章节。</div>
+        </div>
+    </div>
+
+    <footer>
+        Generated on 2026-04-13 &nbsp;|&nbsp; 论文链接均指向 arXiv，部分较新论文的 ID 请以实际查询为准
+    </footer>
+
+</div>
+</body>
+</html>
